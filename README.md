@@ -8,3 +8,4 @@ There are various branches for different frameworks.
 At this time current supported branches are:
 
 - postgresql (DB only + persistent storage)
+- npp (Nginx + PostgreSQL + PHP)
