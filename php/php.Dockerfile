@@ -1,4 +1,4 @@
-FROM php:8.2.24-fpm-alpine
+FROM php:8.3.12-fpm-alpine
 
 RUN apk update && apk add --no-cache \
   postgresql-dev \
