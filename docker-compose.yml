@@ -5,7 +5,7 @@ networks:
 
 services:
   # Database
-  postgres:
+  database:
     image: postgres:15.3-alpine
     container_name: ${APP_NAME}_postgres
     restart: always
@@ -21,21 +21,21 @@ services:
       - localdev
 
   # WebServer
-  nginx:
+  webserver:
     image: nginx:stable-alpine
     container_name: ${APP_NAME}_nginx
     ports:
       - ${SERVER_PORT}:80
     links:
       - php
-      - postgres
+      - database
     volumes:
       - ./nginx/server.conf:/etc/nginx/nginx.conf:ro
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
       - ./app:/var/www/html
     depends_on:
       - php
-      - postgres
+      - database
     networks:
       - localdev
   
