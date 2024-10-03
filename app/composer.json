@@ -18,7 +18,11 @@
         "composer/installers": "^2.0",
         "drupal/core": "^10.3",
         "drupal/core-composer-scaffold": "^10.3",
-        "drupal/core-project-message": "^10.3"
+        "drupal/core-project-message": "^10.3",
+        "drupal/devel": "^5.3",
+        "drupal/pathauto": "^1.13",
+        "drupal/token": "^1.15",
+        "drush/drush": "^13.2"
     },
     "conflict": {
         "drupal/drupal": "*"
